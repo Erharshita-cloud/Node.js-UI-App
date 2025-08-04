@@ -1,0 +1,12 @@
+<%- include('layout', { body: `
+    <form action="/submit" method="POST">
+        <input type="text" name="message" placeholder="Enter a message" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Messages:</h2>
+    <ul>
+        ${messages.map(msg => `<li>${msg}</li>`).join('')}
+    </ul>
+` }) %>
+
